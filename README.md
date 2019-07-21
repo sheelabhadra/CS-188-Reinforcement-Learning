@@ -1,0 +1,2 @@
+# Value Iteration and Q-learning
+This repo contains my solutions to the problems in project 3 of the CS 188: Introduction to Artificial Intelligence course offered at UC Berkeley. Details about the project can be found [here](https://inst.eecs.berkeley.edu/~cs188/fa18/project3.html#Submission).
