@@ -204,12 +204,12 @@ class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
     def runValueIteration(self):
         # "*** YOUR CODE HERE ***"
         states = self.mdp.getStates()
-        pq = PriorityQueue()
+        pq = util.PriorityQueue()
         for state in states:
           self.pis[state] = None
 
         # Commpute the predecessors for each state here
-        
+        ##### TODO #####
 
         # Step 1
         for state in states:
@@ -227,13 +227,13 @@ class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
         for it in range(self.iterations):
           if pq.isEmpty():
             break
-          priority, count, state = pq.pop()
+          
+          state = pq.pop()
           if state != 'TERMINAL_STATE':
             self.values[state] += -priority
 
           # iterate over the predecessors of the state
-
-
+          ##### TODO #####
 
 
           for state in states:
