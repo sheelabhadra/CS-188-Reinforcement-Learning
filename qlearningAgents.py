@@ -123,9 +123,9 @@ class QLearningAgent(ReinforcementAgent):
           return action
         else:
           if util.flipCoin(self.epsilon):
-            action = self.computeActionFromQValues(state)
-          else:
             action = random.choice(legalActions)
+          else:
+            action = self.computeActionFromQValues(state)
         return action
 
     def update(self, state, action, nextState, reward):
