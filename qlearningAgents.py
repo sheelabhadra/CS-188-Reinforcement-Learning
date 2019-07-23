@@ -219,7 +219,8 @@ class ApproximateQAgent(PacmanQAgent):
 
         featureVector = self.featExtractor.getFeatures(state, action)
         
-        self.weights[(state, action)] += self.alpha*diff*featureVector[(state, action)]
+        for i in featureVector:
+          self.weights[i] += self.alpha*diff*featureVector[i]
 
     def final(self, state):
         "Called at the end of each game."
